@@ -12,13 +12,19 @@ public class detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         
-        String subject = getIntent().getStringExtra("Subject");
-        String date = getIntent().getStringExtra("Date");
-        String time = getIntent().getStringExtra("Time");
-        String room = getIntent().getStringExtra("Room");
+        String Title = getIntent().getStringExtra("Title");
+        String Subtitle = getIntent().getStringExtra("Subtitle");
+        int Img = getIntent().getIntExtra("Icon",0);
 
-        TextView txt = findViewById(R.id.subject_title_news);
-        txt.setText(subject);
+
+        TextView title = findViewById(R.id.Title);
+        TextView subtitle = findViewById(R.id.Subtitle);
+        ImageView img =findViewById(R.id.Icon);
+
+        title.setText(Title);
+        subtitle.setText(Subtitle);
+        img.setImageResource(Img);
+
 
 
         

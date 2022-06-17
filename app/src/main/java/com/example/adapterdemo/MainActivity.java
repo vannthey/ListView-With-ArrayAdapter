@@ -14,17 +14,16 @@ import com.example.adapterdemo.adapter.MyListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] subject ={"Management Information System", "System Analyze", "Ecommerce"};
-    String[] date ={"11,07,2022", "11,07,2022", "11,07,2022"};
-    String[] time ={"6:00pm to 8:00pm", "6:00pm to 8:00pm", "6:00pm to 8:00pm"};
-    String[] room ={"Preah Kan", "Preah Kan"," Preah Kan"};
+    String[] Title_program={"Java Programing","C Programing","PhP Programing","Python Programing"};
+    Integer[] Icon_program={R.drawable.java_icon,R.drawable.c_icon,R.drawable.php_icon,R.drawable.pyton_icon};
+    String[] Sub_title={"This is Java","This is C","This is Php","This is Python"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyListAdapter adapter=new MyListAdapter(this, subject, date, time, room);
+        MyListAdapter adapter=new MyListAdapter(this,Title_program,Sub_title,Icon_program);
 
         ListView list=findViewById(R.id.listView);
         list.setAdapter(adapter);
@@ -37,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, detail.class);
 
                 //put data
-                intent.putExtra("Subject", subject[i]);
-                intent.putExtra("Date",date[i]);
-                intent.putExtra("Time", time[i]);
-                intent.putExtra("Room", room[i]);
+                intent.putExtra("Title", Title_program[i]);
+                intent.putExtra("Subtitle",Sub_title[i]);
+                intent.putExtra("Icon", Icon_program[i]);
                 startActivity(intent);
             }
         });

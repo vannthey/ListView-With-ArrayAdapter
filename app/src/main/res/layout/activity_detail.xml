@@ -4,15 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".detail">
+
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
     <TextView
-        android:id="@+id/subject_title_news"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Hello world"
-        android:textSize="25dp" />
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtitle" />
+
 
 </LinearLayout>
